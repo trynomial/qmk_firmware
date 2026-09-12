@@ -119,18 +119,17 @@ static bool    factory_reset = false;
 
 // clang-format off
 wt_func_t wireless_transport = {
-    ckbt51_init,
-    ckbt51_connect,
-    ckbt51_become_discoverable,
-    ckbt51_disconnect,
-    ckbt51_send_keyboard,
-    ckbt51_send_nkro,
-    ckbt51_send_consumer,
-    ckbt51_send_system,
-    ckbt51_send_mouse,
-    NULL,
-    NULL,
-    ckbt51_task,
+    .init             = ckbt51_init,
+    .connect_ex       = ckbt51_connect,
+    .pairing_ex       = ckbt51_become_discoverable,
+    .disconnect       = ckbt51_disconnect,
+    .send_keyboard    = ckbt51_send_keyboard,
+    .send_nkro        = ckbt51_send_nkro,
+    .send_consumer    = ckbt51_send_consumer,
+    .send_system      = ckbt51_send_system,
+    .send_mouse       = ckbt51_send_mouse,
+    .update_bat_level = NULL,
+    .task             = ckbt51_task,
 };
 // clang-format on
 
