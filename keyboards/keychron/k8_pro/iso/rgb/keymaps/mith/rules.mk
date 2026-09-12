@@ -1,0 +1,3 @@
+VIA_ENABLE = yes
+UNICODE_ENABLE = yes
+COMBO_ENABLE = yes
